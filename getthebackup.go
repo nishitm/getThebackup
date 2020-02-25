@@ -68,7 +68,8 @@ func scanFiles() {
 			}
 
 		}
-
+		fmt.Printf("\033[2K\r%s", "")
+		fmt.Println("\n************* Scan Ended. / PATH : " + fndPTHS + " *************\n")
 	}
 
 }
@@ -122,6 +123,5 @@ func main() {
 	Host : ` + *hostname + `
 	`)
 
-	startScan := scanPath(folders, *hostname)
-	fmt.Println(startScan)
+	scanPath(folders, *hostname)
 }
